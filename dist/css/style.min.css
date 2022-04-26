@@ -1261,10 +1261,6 @@ section.contact-section .block-wrap .text-wrap form select {
   border-radius: 10px;
 }
 
-section.contact-section .block-wrap .text-wrap form select:invalid {
-  color: #8F95A5;
-}
-
 section.contact-section .block-wrap .text-wrap form button {
   width: 100%;
   height: 80px;
