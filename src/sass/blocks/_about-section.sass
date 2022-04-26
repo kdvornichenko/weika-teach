@@ -1,0 +1,271 @@
+section.about-section
+    margin-top: 150px
+    .block-wrap
+        display: flex
+        justify-content: space-between
+    .about-text-wrap
+        .text
+            margin-top: 23px
+            font-size: 20px
+            line-height: 30px
+            max-width: 635px
+        .text.visible
+            -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+            animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+        .socials
+            h3.visible
+                -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+                animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+            .social-icons
+                display: flex
+                gap: 15px
+                .social-icon-wrap
+                    cursor: pointer
+                    transition: transform 0.5s
+                    display: flex
+                    align-items: center
+                .social-icon-wrap
+                    &:hover
+                        transform: scale(1.3)
+                    a
+                        display: flex
+                    svg
+                        z-index: 1
+                        transition: 0.5s
+                        &:hover
+                            fill: #fff
+                .inst.visible
+                    -webkit-animation: slide-in-left 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+                    animation: slide-in-left 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+                    &::before
+                        z-index: 0
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        width: 0
+                        height: 0
+                        border-radius: 12px
+                        background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%)
+                        transition: width 0.5s, height 0.5s
+                    &:hover::before
+                        width: 41px
+                        height: 41px
+                .telegram.visible
+                    -webkit-animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+                    animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+                    path
+                        transition: 0.7s
+                    path:last-child
+                        transition: 0.5s
+                    &:hover
+                        transform: scale(1.2)
+                        svg
+                            path:first-child
+                                fill: #229ED9
+                            path:nth-child(2)
+                                fill: #016B9D
+                            path:nth-child(3)
+                                fill: #2191C6
+                            path:last-child
+                                fill: #fff
+                    &::before
+                        z-index: 0
+                        content: ''
+                        position: absolute
+                        top: 46%
+                        left: 54%
+                        transform: translate(-50%, -50%)
+                        width: 0
+                        height: 0
+                        border-radius: 50%
+                        background: #229ED9
+                        transition: width 0.5s, height 0.5s
+                    &:hover::before
+                        width: 54px
+                        height: 54px
+                .vk.visible
+                    -webkit-animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+                    animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+                    path
+                        transition: 0.8s
+                    &:hover
+                        transform: scale(1.2)
+                        svg
+                            path:first-child
+                                fill: #229ED9
+                            path:last-child
+                                fill: #fff
+                    &::before
+                        z-index: 0
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        width: 0
+                        height: 0
+                        border-radius: 50%
+                        background: #229ED9
+                        transition: width 0.5s, height 0.5s
+                    &:hover::before
+                        width: 50px
+                        height: 50px
+                .wp.visible
+                    -webkit-animation: slide-in-left 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+                    animation: slide-in-left 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+                    path
+                        transition: 0.5s
+                    &:hover
+                        transform: scale(1.2)
+                        svg
+                            path:last-child
+                                fill: #fff
+                    &::before
+                        z-index: 0
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        width: 0
+                        height: 0
+                        border-radius: 18px
+                        background: #40C351
+                        transition: width 0.5s, height 0.5s
+                    &:hover::before
+                        width: 53px
+                        height: 53px
+    // .about-numbers
+    //     margin-top: 45px
+    //     display: flex
+    //     justify-content: space-between
+    //     .number-block
+    //         text-align: center
+    //         h2
+    //             color: #2A3246
+    //         .text
+    //             margin-top: 0
+    .about-img
+        margin-top: -80px
+    .about-img.visible
+        -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+        animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+@-webkit-keyframes slide-in-left
+  0% 
+    -webkit-transform: translateX(-1000px)
+    transform: translateX(-1000px)
+    opacity: 0
+
+  100% 
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+    opacity: 1
+
+@keyframes slide-in-left
+    0%
+        -webkit-transform: translateX(-1000px)
+        transform: translateX(-1000px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+        opacity: 1
+
+@-webkit-keyframes slide-in-right
+  0% 
+    -webkit-transform: translateX(1000px)
+    transform: translateX(1000px)
+    opacity: 0
+
+  100% 
+    -webkit-transform: translateX(0)
+    transform: translateX(0)
+    opacity: 1
+
+@keyframes slide-in-right
+    0%
+        -webkit-transform: translateX(1000px)
+        transform: translateX(1000px)
+        opacity: 0
+
+    100%
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+        opacity: 1
+
+@media screen and ( max-width: 993px )
+    section.about-section
+        margin-top: 100px
+        .about-text-wrap
+            .text
+                font-size: 16px
+                line-height: 24px
+                max-width: 500px
+        .about-numbers
+            margin-top: 20px
+            justify-content: unset
+            gap: 50px
+        .about-img
+            max-width: 336px
+            display: flex
+            align-items: center
+
+@media screen and ( max-width: 768px )
+    section.about-section
+        margin-top: 50px
+        .about-text-wrap
+            .text
+                font-size: 14px
+                line-height: 21px
+                max-width: 320px
+        .about-numbers
+            margin-top: 10px
+            justify-content: space-between
+        .about-img
+            margin-top: -40px
+            max-width: 295px
+            align-items: start
+
+@media screen and ( max-width: 576px )
+    section.about-section
+        margin-top: 70px
+        flex-direction: column
+        text-align: center
+        .block-wrap
+            display: flex
+            flex-direction: column-reverse
+            align-items: center
+        .about-text-wrap
+            .text
+                margin-top: 30px
+                font-size: 14px
+                line-height: 21px
+                max-width: 100%
+            .socials
+                .social-icons
+                    justify-content: center
+        .about-numbers
+            margin-top: 15px
+            justify-content: space-evenly
+            .number-block
+                .number
+                    font-size: 26px
+        .about-img
+            margin-top: 25px
+            max-width: 295px
+
+@media screen and ( max-width: 376px )
+    section.about-section
+        margin-top: 50px
+        .about-numbers
+            flex-direction: column
+            align-items: center
+            justify-content: unset
+            gap: 0
+            .number-block
+                .number
+                    line-height: 60px
