@@ -33,6 +33,8 @@ header
                     transition: 0.5s
         .menu__body
             width: 40%
+            button.mobile-button
+                display: none
             nav
                 ul
                     padding: 0
@@ -58,8 +60,6 @@ header
                         a
                             text-decoration: none
                             color: #000
-            button.mobile-button
-                display: none
         .mobile_menu
             display: none
 @keyframes typewriter
@@ -208,8 +208,12 @@ header
                     button.mobile-button
                         display: block
                         width: 30vw
-                        color: #fff
                         border-color: #fff
+                        a
+                            span
+                                color: #fff
+                                transform: unset
+                                padding: 10px 0
                 &__active
                     right: 0
                     span

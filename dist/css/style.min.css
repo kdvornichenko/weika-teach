@@ -111,8 +111,18 @@ button {
   transition: 0.5s;
 }
 
-button:hover {
+button:hover a {
   color: #fff;
+}
+
+button a {
+  transition: 0.5s;
+}
+
+button a span {
+  display: block;
+  width: 100%;
+  padding: 18px 0;
 }
 
 button::before {
@@ -136,6 +146,11 @@ button:hover::before {
 button span {
   position: relative;
   z-index: 1;
+}
+
+button a {
+  text-decoration: none;
+  color: #000;
 }
 
 img {
@@ -198,6 +213,10 @@ header .header-wrap .menu__body {
   width: 40%;
 }
 
+header .header-wrap .menu__body button.mobile-button {
+  display: none;
+}
+
 header .header-wrap .menu__body nav ul {
   padding: 0;
   display: flex;
@@ -232,10 +251,6 @@ header .header-wrap .menu__body nav ul li:hover::before {
 header .header-wrap .menu__body nav ul li a {
   text-decoration: none;
   color: #000;
-}
-
-header .header-wrap .menu__body button.mobile-button {
-  display: none;
 }
 
 header .header-wrap .mobile_menu {
@@ -1397,6 +1412,10 @@ footer ul li a {
     font-size: 24px;
   }
 
+  section.main-section button a span {
+    padding: 23px 0;
+  }
+
   section.main-section .img-wrap {
     max-width: 460px;
   }
@@ -1417,6 +1436,10 @@ footer ul li a {
 
   section.skills-section .grid button {
     margin-top: 25px;
+  }
+
+  section.skills-section .grid button a span {
+    padding: 15px 0;
   }
 
   section.skills-section .grid .speaking .card-img {
@@ -1663,6 +1686,10 @@ footer ul li a {
     font-size: 18px;
   }
 
+  section.main-section button a span {
+    padding: 18px 0;
+  }
+
   section.main-section .img-wrap {
     max-width: 320px;
   }
@@ -1671,8 +1698,12 @@ footer ul li a {
     display: flex;
   }
 
-  button {
+  section.skills-section .grid button {
     width: 100%;
+  }
+
+  section.skills-section .grid button a span {
+    padding: 13px 0;
   }
 
   section.about-section {
@@ -1890,8 +1921,13 @@ footer ul li a {
   header .header-wrap .menu__body button.mobile-button {
     display: block;
     width: 30vw;
-    color: #fff;
     border-color: #fff;
+  }
+
+  header .header-wrap .menu__body button.mobile-button a span {
+    color: #fff;
+    transform: unset;
+    padding: 10px 0;
   }
 
   header .header-wrap .menu__active {
@@ -1987,6 +2023,10 @@ footer ul li a {
     width: 305px;
     height: 75px;
     font-size: 18px;
+  }
+
+  section.main-section button a span {
+    padding: 23px 0;
   }
 
   section.main-section .img-wrap {
@@ -2317,6 +2357,10 @@ footer ul li a {
     width: 290px;
     height: 60px;
     font-size: 16px;
+  }
+
+  section.main-section button a span {
+    padding: 18px 0;
   }
 
   section.main-section .img-wrap {

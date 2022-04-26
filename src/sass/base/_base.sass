@@ -83,7 +83,14 @@ button
     overflow: hidden
     transition: 0.5s
     &:hover
-        color: #fff
+        a
+            color: #fff
+    a
+        transition: 0.5s
+        span
+            display: block
+            width: 100%
+            padding: 18px 0
     &::before
         content: ''
         position: absolute
@@ -101,6 +108,9 @@ button
     span
         position: relative
         z-index: 1
+button a
+    text-decoration: none
+    color: #000
 
 img
     max-width: 100%

@@ -3,9 +3,18 @@ export function menu() {
         const iconMenu = document.querySelector('.menu');
         const menuBody = document.querySelector('.menu__body');
         const body = document.querySelector('body');
+        const menuBtn = document.querySelector('.mobile-button');
         
         if (iconMenu){
             iconMenu.addEventListener("click", function(e){
+                iconMenu.classList.toggle('menu__active');
+                menuBody.classList.toggle('menu__active');
+                body.classList.toggle('body__active');
+            });
+        }
+
+        if (menuBtn){
+            menuBtn.addEventListener("click", function(e){
                 iconMenu.classList.toggle('menu__active');
                 menuBody.classList.toggle('menu__active');
                 body.classList.toggle('body__active');
