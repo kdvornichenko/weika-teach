@@ -13,10 +13,10 @@ section.skills-section
             background: #F5F5F5
             border-radius: 10px
             padding: 35px
-        .speaking
-            grid-area: speaking
         .speaking.visible
             animation: slide-in-left 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both
+        .speaking
+            grid-area: speaking
             .card-img
                 margin-top: 40px
             h3
@@ -110,6 +110,18 @@ section.skills-section
                 button
                     position: absolute
                     bottom: 20px
+            div.speaking
+                .card-img
+                    margin-top: 40px
+                h3
+                    margin-top: 0
+            .speaking.visible
+                animation-duration: 0.5s
+            div.writing
+                .card-img
+                    margin-top: 40px
+            .writing.visible
+                animation-duration: 0.3s
             div.listening
                 flex-direction: column-reverse
                 justify-content: flex-end
@@ -117,6 +129,10 @@ section.skills-section
                     margin-top: 5vw
                 h3
                     margin-top: 5vw
+            .listening.visible
+                animation-duration: 0.3s
+            .reading.visible
+                animation-duration: 0.5s
 
 @media screen and ( max-width: 500px )
     section.skills-section
