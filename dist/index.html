@@ -374,9 +374,9 @@
                 Discover your current English level by taking our free online English test. <br> Sign up to our newsletter for learning tips and free resources
             </div>
             <form action="" autocomplete="on" name="sendMail">
-                <input type="text" name="name" id="name" placeholder="Name*">
-                <input type="tel" name="tel" id="tel" placeholder="Phone*">
-                <select placeholder="Your English Level">
+                <input required type="text" name="name" id="name" placeholder="Name*">
+                <input type="tel" name="tel" id="tel" placeholder="Phone">
+                <select required placeholder="Your English Level">
                     <option value="" selected disabled>Choose Your English Level</options>
                     <option value="A1">А1</options>
                     <option value="A2">A2</options>
@@ -384,8 +384,9 @@
                     <option value="B2">B2</options>
                     <option value="C1">C1</options>
                     <option value="C2">C2</options>
+                    <option value="Test">Test Me</options>
                 </select>
-                <input type="email" name="mail" id="mail" placeholder="E-mail">
+                <input required type="email" name="mail" id="mail" placeholder="E-mail*">
                 <button type="submit"><span>Contact</span></button>
             </form>
         </div>

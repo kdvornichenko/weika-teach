@@ -1522,6 +1522,15 @@ footer ul li a {
     margin-top: 20px;
   }
 
+  section.contact-section .block-wrap .text-wrap form input,
+  section.contact-section .block-wrap .text-wrap form select {
+    height: 60px;
+  }
+
+  section.contact-section .block-wrap .text-wrap form select {
+    padding-left: 28px;
+  }
+
   section.contact-section .block-wrap .text-wrap form input {
     height: 60px;
   }
@@ -1737,6 +1746,16 @@ footer ul li a {
 
   section.contact-section .block-wrap .text-wrap form {
     margin-top: 10px;
+  }
+
+  section.contact-section .block-wrap .text-wrap form input,
+  section.contact-section .block-wrap .text-wrap form select {
+    height: 50px;
+  }
+
+  section.contact-section .block-wrap .text-wrap form select {
+    padding-left: 8px;
+    font-size: 14px;
   }
 
   section.contact-section .block-wrap .text-wrap form input {
@@ -2067,8 +2086,8 @@ footer ul li a {
   section.pricing-section .block-wrap .block.visible,
   section.pricing-section .block-wrap .block.visible:first-child,
   section.pricing-section .block-wrap .block.visible:last-child {
-    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
+    animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
   }
 
   section.pricing-section .block-wrap .block {
@@ -2148,6 +2167,10 @@ footer ul li a {
 
   section.contact-section .block-wrap .text-wrap form {
     margin-top: 20px;
+  }
+
+  section.contact-section .block-wrap .text-wrap form select {
+    padding-left: 8px;
   }
 
   footer {
