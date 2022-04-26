@@ -1,0 +1,70 @@
+footer
+    margin-top: 100px
+    padding-top: 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-top: 1px solid #e5e5e5
+    .logo
+        font-size: 36px
+        cursor: pointer
+        span
+            color: #939393
+    ul
+        display: flex
+        justify-content: space-between
+        max-width: 630px
+        gap: 40px
+        li
+            &::marker
+                color: $light-grey
+            &:first-child
+                list-style: none
+            a
+                text-decoration: none
+                color: $light-grey
+                font-size: 18px
+                line-height: 36px
+
+@media screen and ( max-width: 993px )
+    footer
+        margin-top: 60px
+        .logo
+            font-size: 30px
+        ul
+            gap: 25px
+            li
+                a
+                    font-size: 16px
+
+@media screen and ( max-width: 768px )
+    footer
+        margin-top: 50px
+        padding-top: 20px
+        .logo
+            font-size: 20px
+        ul
+            align-items: center
+            gap: 30px
+            li
+                line-height: 10px
+                &:first-child
+                    width: min-content
+                a
+                    font-size: 14px
+                    line-height: 20px
+
+@media screen and ( max-width: 576px )
+    footer
+        margin-top: 30px
+        padding-top: 10px
+        .logo
+            font-size: 18px
+        ul
+            padding-left: 0
+            gap: 10px
+            li
+                width: min-content
+                list-style: none
+                a
+                    font-size: 12px
