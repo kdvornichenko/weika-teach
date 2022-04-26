@@ -1259,6 +1259,7 @@ section.contact-section .block-wrap .text-wrap form select {
   border: 1px solid #8F95A5;
   box-sizing: border-box;
   border-radius: 10px;
+  background: #fff;
 }
 
 section.contact-section .block-wrap .text-wrap form button {
