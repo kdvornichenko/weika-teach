@@ -2230,13 +2230,21 @@ footer ul li a {
     font-size: 24px;
   }
 
+  header .header-wrap .logo .typewriter .ch.margin {
+    margin-left: -16px;
+  }
+
 @keyframes typewriter {
-    from {
+    0% {
       width: 0;
     }
 
-    to {
+    50%, 90% {
       width: 165px;
+    }
+
+    100% {
+      width: 145px;
     }
 }
 }
