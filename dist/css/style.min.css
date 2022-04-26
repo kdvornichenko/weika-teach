@@ -707,19 +707,19 @@ section.skills-section .grid div.card {
   padding: 35px;
 }
 
-section.skills-section .grid .speaking {
-  grid-area: speaking;
-}
-
 section.skills-section .grid .speaking.visible {
   animation: slide-in-left 1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
-section.skills-section .grid .speaking.visible .card-img {
+section.skills-section .grid .speaking {
+  grid-area: speaking;
+}
+
+section.skills-section .grid .speaking .card-img {
   margin-top: 40px;
 }
 
-section.skills-section .grid .speaking.visible h3 {
+section.skills-section .grid .speaking h3 {
   margin-top: 40px;
 }
 
@@ -2003,6 +2003,26 @@ footer ul li a {
     bottom: 20px;
   }
 
+  section.skills-section .grid div.speaking .card-img {
+    margin-top: 40px;
+  }
+
+  section.skills-section .grid div.speaking h3 {
+    margin-top: 0;
+  }
+
+  section.skills-section .grid .speaking.visible {
+    animation-duration: 0.5s;
+  }
+
+  section.skills-section .grid div.writing .card-img {
+    margin-top: 40px;
+  }
+
+  section.skills-section .grid .writing.visible {
+    animation-duration: 0.3s;
+  }
+
   section.skills-section .grid div.listening {
     flex-direction: column-reverse;
     justify-content: flex-end;
@@ -2014,6 +2034,14 @@ footer ul li a {
 
   section.skills-section .grid div.listening h3 {
     margin-top: 5vw;
+  }
+
+  section.skills-section .grid .listening.visible {
+    animation-duration: 0.3s;
+  }
+
+  section.skills-section .grid .reading.visible {
+    animation-duration: 0.5s;
   }
 
   section.about-section {
@@ -2053,6 +2081,10 @@ footer ul li a {
     max-width: 295px;
   }
 
+  section.about-section .about-img.visible {
+    animation-duration: 0.5s;
+  }
+
   section.pricing-section {
     margin-top: 70px;
   }
@@ -2062,6 +2094,13 @@ footer ul li a {
     flex-direction: column;
     align-items: center;
     gap: 60px;
+  }
+
+  section.pricing-section .block-wrap .block.visible,
+  section.pricing-section .block-wrap .block.visible:first-child,
+  section.pricing-section .block-wrap .block.visible:last-child {
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
 
   section.pricing-section .block-wrap .block {
@@ -2230,13 +2269,21 @@ footer ul li a {
     font-size: 24px;
   }
 
+  header .header-wrap .logo .typewriter .ch.margin {
+    margin-left: -16px;
+  }
+
 @keyframes typewriter {
-    from {
+    0% {
       width: 0;
     }
 
-    to {
+    50%, 90% {
       width: 165px;
+    }
+
+    100% {
+      width: 145px;
     }
 }
 }
