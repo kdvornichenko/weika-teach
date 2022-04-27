@@ -11,9 +11,9 @@ $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->IsHTML(true);
 
 //От кого письмо
-$mail->setForm('weikaa@mail.ru', 'Виктория Меньшагина');
+$mail->setFrom('kirilly11@mail.ru', 'Виктория Меньшагина');
 //Кому отправить
-$mail->addAdress('gglade999@gmail.com');
+$mail->addAddress('gglade999@gmail.com');
 //Тема письма
 $mail->Subject = 'Новая Заявка';
 
