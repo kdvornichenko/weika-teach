@@ -13,12 +13,12 @@ $mail->IsHTML(true);
 //От кого письмо
 $mail->setFrom('weika_teach@mercyyy.ru', 'Виктория Меньшагина');
 //Кому отправить
-$mail->addAddress('gglade999@gmail.com');
+$mail->addAddress('weikaa@mail.ru');
 //Тема письма
 $mail->Subject = 'Новая Заявка';
 
 //Тело письма
-$body = '<h1>Привет!</h1>'
+$body = '<h1>Привет!</h1>';
 
 if(trim(!empty($_POST['name']))){
     $body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
@@ -33,7 +33,7 @@ if(trim(!empty($_POST['lvl']))){
     $body.='<p><strong>Уровень:</strong> '.$_POST['lvl'].'</p>';
 }
 
-$mail->Body = $body
+$mail->Body = $body;
 
 //Отправляем
 if(!$mail->send()){
