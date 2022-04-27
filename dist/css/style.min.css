@@ -1263,7 +1263,7 @@ section.contact-section .block-wrap .text-wrap form {
   flex-direction: column;
 }
 
-section.contact-section .block-wrap .text-wrap form input,
+section.contact-section .block-wrap .text-wrap form input:not(.checkbox__input),
 section.contact-section .block-wrap .text-wrap form select {
   padding-left: 33px;
   width: 100%;
@@ -1275,17 +1275,62 @@ section.contact-section .block-wrap .text-wrap form select {
   box-sizing: border-box;
   border-radius: 10px;
   background: #fff;
+  transition: 0.2s;
+}
+
+section.contact-section .block-wrap .text-wrap form input:not(.checkbox__input):focus,
+section.contact-section .block-wrap .text-wrap form select:focus {
+  box-shadow: 0 0 15px #8F95A5;
+}
+
+section.contact-section .block-wrap .text-wrap form input._error,
+section.contact-section .block-wrap .text-wrap form select._error {
+  box-shadow: 0 0 15px red;
+}
+
+section.contact-section .block-wrap .text-wrap form .checkbox {
+  display: flex;
+}
+
+section.contact-section .block-wrap .text-wrap form .checkbox._error .checkbox__label::before {
+  box-shadow: 0 0 15px red;
 }
 
 section.contact-section .block-wrap .text-wrap form button {
   width: 100%;
   height: 80px;
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 section.contact-section .block-wrap .text-wrap form button:hover::before {
-  width: 600px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
+}
+
+section.contact-section .block-wrap .text-wrap form button::after {
+  z-index: 5;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 100%;
+  background: #263238 url("../img/loading.svg") center/50px no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+section.contact-section .block-wrap .text-wrap form button._sending::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+section.contact-section .block-wrap .text-wrap form * {
+  outline: none;
 }
 
 footer {

@@ -14,7 +14,7 @@ section.contact-section
                 display: flex
                 gap: 5px
                 flex-direction: column
-                input, select
+                input:not(.checkbox__input), select
                     padding-left: 33px
                     width: 100%
                     height: 80px
@@ -25,13 +25,42 @@ section.contact-section
                     box-sizing: border-box
                     border-radius: 10px
                     background: #fff
+                    transition: 0.2s
+                    &:focus
+                        box-shadow: 0 0 15px #8F95A5
+                input._error, select._error
+                    box-shadow: 0 0 15px red
+                .checkbox
+                    display: flex
+                .checkbox._error .checkbox__label::before
+                    box-shadow: 0 0 15px red
                 button
                     width: 100%
                     height: 80px
                     border-radius: 10px
+                    position: relative
+                    z-index: 1
                     &:hover::before
-                        width: 600px
-                        height: 600px
+                        width: 700px
+                        height: 700px
+                    &::after
+                        z-index: 5
+                        content: ''
+                        position: absolute
+                        top: 0
+                        left: 50%
+                        transform: translate(-50%, 0)
+                        width: 100%
+                        height: 100%
+                        background: $dark-grey url('../img/loading.svg') center / 50px no-repeat
+                        opacity: 0
+                        visibility: hidden
+                        transition: 0.2s
+                button._sending::after
+                    opacity: 1
+                    visibility: visible
+            form *
+                outline: none
 
 @media screen and ( max-width: 993px )
     section.contact-section

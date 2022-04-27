@@ -381,10 +381,11 @@
             <div class="text">
                 Discover your current English level by taking our free online English test. <br> Sign up to our newsletter for learning tips and free resources
             </div>
-            <form class="contact-form" action="" autocomplete="on" name="sendMail">
-                <input required type="text" name="name" id="name" placeholder="Name*">
+            <form id="contact-form" class="contact-form" action="" autocomplete="on" name="sendMail">
+                <input class="_req" type="text" name="name" id="name" placeholder="Name*" >
                 <input type="tel" name="tel" id="tel" placeholder="Phone">
-                <select required placeholder="Your English Level">
+                <input class="_email _req" type="email" name="mail" id="mail" placeholder="E-mail*" >
+                <select class="_req" placeholder="Your English Level" >
                     <option value="" selected disabled>Choose Your English Level</options>
                     <option value="A1">А1</options>
                     <option value="A2">A2</options>
@@ -394,8 +395,11 @@
                     <option value="C2">C2</options>
                     <option value="Test">Test Me</options>
                 </select>
-                <input required type="email" name="mail" id="mail" placeholder="E-mail*">
-                <button type="submit"><span>Contact</span></button>
+                <div class="checkbox">
+                    <input type="checkbox" name="agreement" id="formAgreement" class="checkbox__input _req" checked>
+                    <label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>*</span></label>
+                </div>
+                <button id="submit-btn" type="submit"><a href="#"><span>Contact</span></a></button>
             </form>
         </div>
     </div>
