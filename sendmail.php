@@ -13,7 +13,7 @@ $mail->IsHTML(true);
 //От кого письмо
 $mail->setFrom('weika_teach@mercyyy.ru', 'Виктория Меньшагина');
 //Кому отправить
-$mail->addAddress('weikaa@mail.ru');
+$mail->addAddress('gglade999@gmail.com');
 //Тема письма
 $mail->Subject = 'Новая Заявка';
 
@@ -32,7 +32,7 @@ if(trim(!empty($_POST['email']))){
 if(trim(!empty($_POST['lvl']))){
     $body.='<p><strong>Уровень:</strong> '.$_POST['lvl'].'</p>';
 }
-
+ 
 $mail->Body = $body;
 
 //Отправляем
@@ -42,7 +42,7 @@ if(!$mail->send()){
     $message = 'Данные отправлены!';
 }
 
-$response = ['mesage' => $message];
+$response = ['message' => $message];
 
 header('Content-type: application/json');
 echo json_encode($response);
