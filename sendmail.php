@@ -39,6 +39,7 @@ $mail->Body = $body;
 if(!$mail->send()){
     $message = 'Ошибка';
 } else {
+    $message = 'Данные отправлены!';
 }
 
 $response = ['message' => $message];
