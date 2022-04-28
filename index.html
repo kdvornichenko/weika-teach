@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mailru-domain" content="pDkrnrKwXFdc7EXt" />
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <title>Главная</title>
 </head>
     <body>
         <div class="wrap"></div>
-        <header>
+        <header id="header">
     <div class="header-wrap">
         <div class="logo">
             <div class="typewriter">
@@ -34,22 +36,35 @@
         <div class="menu__body">
             <nav id="nav">
                 <ul>
-                    <li><a class="menu-link" data-goto=".main-section" href="#">Home</a></li>
-                    <li><a class="menu-link" data-goto=".skills-section" href="#">Skills</a></li>
-                    <li><a class="menu-link" data-goto=".about-section" href="#">About Me</a></li>
-                    <li><a class="menu-link" data-goto=".pricing-section" href="#">Pricing</a></li>
-                    <li><a class="menu-link" data-goto=".contact-section" href="#">Contact Me</a></li>
+                    <li><a class="lng-home menu-link" data-goto=".main-section" href="#">Home</a></li>
+                    <li><a class="lng-skills menu-link" data-goto=".skills-section" href="#">Skills</a></li>
+                    <li><a class="lng-about menu-link" data-goto=".about-section" href="#">About Me</a></li>
+                    <li><a class="lng-price menu-link" data-goto=".pricing-section" href="#">Pricing</a></li>
+                    <li><a class="lng-contacts menu-link" data-goto=".contact-section" href="#">Contact Me</a></li>
                 </ul>
-                <button class="mobile-button">
-                    Let’s Talk
+                <button class="lng-contact-btn-1 mobile-button">
+                    <a href="#">
+                        <span class="menu-link" data-goto=".contact-form" >
+                            Let’s Talk
+                        </span>
+                    </a>
                 </button>
             </nav>
             
         </div>
 
-        <button id="dark-btn">
-            <span>Let’s Talk</span>
+        <button class="lng-contact-btn-2" id="dark-btn">
+            <a href="#">
+                <span class="menu-link" data-goto=".contact-form" >
+                    Let’s Talk
+                </span>
+            </a>
         </button>
+
+        <select id="language" class="lang" id="lang">
+            <option value="ru">ru</option>
+            <option selected vlaue="en">en</option>
+        </select>
 
         <div class="menu">
             <span></span>
@@ -60,7 +75,7 @@
             <section class="main-section">
         <div class="text-block">
             <div class="heading">
-                <h1 class="">Learn <br> English<br> For IT</h1>
+                <h1 class="lng-h1">Learn <br> English<br> For IT</h1>
                 <svg width="111" height="113" viewBox="0 0 111 113" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M44 83.5L30.5 72.5L34 68L36.5 62L38.5 56L39 49L40 43.5L42.5 38.5L46.5 34L52.5 31L61 29.5L71 33L76.5 38.5L80 47L79.5 56L76.5 61.5C75.3333 63 72.3 66.4 69.5 68C66 70 62 70.5 57 72.5C53 74.1 48.3333 78.5 46.5 80.5L44 83.5Z" fill="white"/>
                     <path d="M65.0934 71.0555C69.7438 69.8629 73.7835 67.2399 76.7759 63.4701C80.4448 58.848 82.0714 53.0761 81.3559 47.2177C80.6405 41.3604 77.6694 36.1456 72.9936 32.543C68.4635 29.0505 62.8161 27.4979 57.0916 28.1712C51.3673 28.8445 46.2338 31.665 42.6368 36.1129C39.5532 39.9261 37.8715 44.5256 37.7732 49.4141C37.6136 57.3502 34.8789 65.0556 30.0724 71.1108L24.8132 77.7364C22.4804 80.6753 22.9734 84.9642 25.9124 87.297L30.87 91.2322C33.8089 93.5651 38.0979 93.0718 40.4306 90.133L45.6895 83.5079C50.5492 77.3859 57.2444 73.0681 65.0934 71.0555V71.0555ZM40.5771 49.4706C40.6627 45.2103 42.129 41.2011 44.8174 37.8765C51.2762 29.8897 63.1477 28.4935 71.2812 34.7641C75.3591 37.9127 77.9483 42.4517 78.5718 47.5578C79.1957 52.6652 77.7777 57.6971 74.5792 61.7266C71.9705 65.0131 68.4495 67.2996 64.3966 68.339C56.1264 70.4598 49.0165 74.949 43.8016 81.3359L32.5935 72.4393C37.5778 65.9715 40.409 57.8367 40.5771 49.4706V49.4706ZM27.6007 78.7357L28.3065 77.8465L38.5101 88.0419L38.2341 88.3895C38.0888 88.5726 37.9282 88.7359 37.7596 88.8863L27.6007 78.7357ZM30.0615 75.6355L30.853 74.6384L42.0773 83.5479L40.2651 85.8309L30.0615 75.6355V75.6355ZM27.6559 85.1005C26.476 84.164 25.968 82.6913 26.2005 81.3011L34.7959 89.8896C34.0252 89.8319 33.2634 89.5514 32.6138 89.0357L27.656 85.1004L27.6559 85.1005Z" fill="black"/>
@@ -79,13 +94,13 @@
                     <path d="M82.3159 41.0446C82.4096 41.2818 82.5607 41.479 82.7471 41.627C83.1267 41.9283 83.6523 42.0242 84.1354 41.8334L91.4357 38.9486C92.156 38.6641 92.509 37.8494 92.2245 37.1292C91.9401 36.409 91.1254 36.0557 90.405 36.3404L83.1047 39.2251C82.3844 39.5097 82.0314 40.3244 82.3159 41.0446V41.0446Z" fill="black"/>
                     </svg>                                                           
             </div>
-            <div class="text">
+            <div class="lng-main-text text">
                 With our teachers who write a program for 
                 each student, you will be able to make your
                 first sketch after the first lesson.
             </div>
-            <button>
-                <span>Get started</span>
+            <button class="lng-learn-more-btn-main">
+                <a href="#"><span class="menu-link" data-goto=".contact-form">Get started</span></a>
             </button>
         </div>
 
@@ -94,7 +109,7 @@
         </div>
     </section>
         <section class="skills-section" data="">
-    <h2 class="anim">
+    <h2 class="lng-h2-skills anim">
         Skills
     </h2>
     <div class="grid">
@@ -104,22 +119,22 @@
                 <img src="./img/skills-section-speaking.svg" alt="Speaking">
             </div>
 
-            <h3>
+            <h3 class="lng-h3-speking">
                 Speaking
             </h3>
 
-            <div class="text">
+            <div class="lng-speaking-text text">
                 Improve your English skills and confidence. 
                 Live classes and interactive lessons online. 
                 20% extra free for a limited time only<br><br>
 
                 Learn English online and improve your 
                 skills through our high-quality courses
-                and resources – all designed for adult language learners.
+                and resources – all designed for adult language learners
             </div>
 
-            <button>
-                <span>Learn more</span>
+            <button class="lng-learn-more-btn-1">
+                <a href="#"><span class="menu-link" data-goto=".contact-form" >Learn more</span></a>
             </button>
 
         </div>
@@ -129,18 +144,18 @@
                 <img src="./img/skills-section-writing.svg" alt="writing">
             </div>
 
-            <h3>
+            <h3 class="lng-h3-writing">
                 Writing
             </h3>
 
-            <div class="text">
+            <div class="lng-writing-text text">
                 One of the most important and extensive 
                 areas of natural science, the science that 
                 studies substances, also their composition 
             </div>
 
-            <button>
-                <span>Learn more</span>
+            <button class="lng-learn-more-btn-2">
+                <a href="#"><span class="menu-link" data-goto=".contact-form" >Learn more</span></a>
             </button>
 
         </div>
@@ -150,18 +165,18 @@
                 <img src="./img/skills-section-reading.svg" alt="reading">
             </div>
 
-            <h3>
+            <h3 class="lng-h3-reading">
                 Reading
             </h3>
 
-            <div class="text">
+            <div class="lng-reading-text text">
                 Perception and response actions of the user
                 resulting from the use and/or upcoming use 
                 of the product, system or service
             </div>
 
-            <button>
-                <span>Learn more</span>
+            <button class="lng-learn-more-btn-3">
+                <a href="#"><span class="menu-link" data-goto=".contact-form" >Learn more</span></a>
             </button>
 
         </div>
@@ -169,18 +184,18 @@
         <div class="listening card anim">
 
             <div class="listening-text-wrap">
-                <h3>
+                <h3 class="lng-h3-listening">
                     Listening
                 </h3>
     
-                <div class="text">
+                <div class="lng-listening-text text">
                     Here you can find activities to practise
                     your listening skills. Listening will help you
                     to improve your understanding 
                 </div>
     
-                <button>
-                    <span>Learn more</span>
+                <button class="lng-learn-more-btn-4">
+                    <a href="#"><span class="menu-link" data-goto=".contact-form" >Learn more</span></a>
                 </button>
             </div>
 
@@ -192,19 +207,19 @@
     </div>
 </section>
         <section class="about-section">
-    <h2 class="anim">
+    <h2 class=" lng-h2-about anim">
         About Me
     </h2>
     
     <div class="block-wrap">
         <div class="about-text-wrap">
 
-            <div class="text anim">
+            <div class="lng-about-text text anim">
                 The model offers a framework for discussing problems related to the user's experience, as well as possible ways and means of solving them. Application development begins at the top level (strategy), where the future software product is described quite abstractly from the point of view of the expectations of both users and the customer.
             </div>
 
             <div class="socials">
-                <h3 class="anim">
+                <h3 class="lng-h3-socials anim">
                     My Socials
                 </h3>
                 <div class="social-icons">
@@ -287,7 +302,7 @@
 
 </section>
         <section class="pricing-section">
-    <h2 class="anim">
+    <h2 class="lng-h2-pricing anim">
         Pricing
     </h2>
 
@@ -296,19 +311,19 @@
             <div class="pricing-img">
                 <img src="./img/pricing-section-self-study.svg" alt="Self Study">
             </div>
-            <h3>
+            <h3 class="lng-h3-self-study">
                 Self-study online course
             </h3>
-            <div class="text">
+            <div class="lng-self-study-text text">
                 Start learning English online in live classes
                 with qualified EC teachers and students 
-                from all over the world.
+                from all over the world
             </div>
             <div class="price-label">
                 <div class="price">
-                     £5.99
+                     5000₽
                 </div>
-                <div class="period">
+                <div class="lng-pricing-label-1 period">
                     per month
                 </div>
             </div>
@@ -318,18 +333,18 @@
             <div class="pricing-img">
                 <img src="./img/pricing-section-online-classes.svg" alt="Online Classes">
             </div>
-            <h3>
+            <h3 class="lng-h3-online-classes">
                 Live online <br>  classes
             </h3>
-            <div class="text">
+            <div class="lng-online-classes-text text">
                 Interactive group classes with expert
                 teachers. Free 7-day trial
             </div>
             <div class="price-label">
                 <div class="price">
-                     £12.99
+                    5000₽
                 </div>
-                <div class="period">
+                <div class="lng-pricing-label-2 period">
                     per month
                 </div>
             </div>
@@ -339,18 +354,18 @@
             <div class="pricing-img">
                 <img src="./img/pricing-section-personal-tutorial.svg" alt="Personal Tutorial">
             </div>
-            <h3>
+            <h3 class="lng-h3-personal-tutorial">
                 Personal <br> Tuition
             </h3>
-            <div class="text">
+            <div class="lng-personal-tutorial-text text">
                 Online one-to-one English tutoring – enjoy
                 our first session for only $1
             </div>
             <div class="price-label">
                 <div class="price">
-                     £20.99
+                    5000₽
                 </div>
-                <div class="period">
+                <div class="lng-pricing-label-3 period">
                     per month
                 </div>
             </div>
@@ -358,8 +373,8 @@
 
     </div>
 </section>
-        <section class="contact-section">
-    <h2 class="mobile-heading anim">
+        <section id="contact-section" class="contact-section">
+    <h2 class="lng-h2-contact-1 mobile-heading anim">
         Contact Us
     </h2>
     <div class="block-wrap">
@@ -367,26 +382,38 @@
             <img src="./img/contact-section-img.svg" alt="Girl With Airplane">
         </div>
         <div class="text-wrap">
-            <h2 class="pc-heading anim">
+            <h2 class="lng-h2-contact-2 pc-heading anim">
                 Contact Us
             </h2>
-            <div class="text">
+            <div class="lng-contact-text text">
                 Discover your current English level by taking our free online English test. <br> Sign up to our newsletter for learning tips and free resources
-            </div>
-            <form action="" autocomplete="on" name="sendMail">
-                <input type="text" name="name" id="name" placeholder="Name*">
-                <input type="tel" name="tel" id="tel" placeholder="Phone*">
-                <select placeholder="Your English Level">
-                    <option value="" selected disabled>Choose Your English Level</options>
+            </div> 
+            <form id="contact-form" class="contact-form" action="sendmail.php" method="post" autocomplete="on" name="sendMail">
+                <label class="lng-form-name" for="name">Name*</label>
+                <input class="_req" type="text" name="name" id="name" >
+
+                <label class="lng-form-tel" for="tel">Phone</label>
+                <input type="tel" name="tel" id="tel">
+
+                <label class="" for="mail">E-mail*</label>
+                <input class="_email _req" type="email" name="email" id="mail" >
+
+                <select class="_req" name="lvl" placeholder="Your English Level" >
+                    <option class="lng-option-label" value="" selected disabled>Choose Your English Level</options>
                     <option value="A1">А1</options>
                     <option value="A2">A2</options>
                     <option value="B1">B1</options>
                     <option value="B2">B2</options>
                     <option value="C1">C1</options>
                     <option value="C2">C2</options>
+                    <option class="lng-option-test" value="Test">Test Me</options>
                 </select>
-                <input type="email" name="mail" id="mail" placeholder="E-mail">
-                <button type="submit"><span>Contact</span></button>
+
+                <div class="checkbox">
+                    <input type="checkbox" name="agreement" id="formAgreement" class="checkbox__input _req" checked>
+                    <label for="formAgreement" class="checkbox__label"><span class="lng-form-agreement">Я даю свое согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>*</span></label>
+                </div>
+                <button class="lng-form-btn" id="submit-btn" type="submit"><a href="#"><span>Contact</span></a></button>
             </form>
         </div>
     </div>
