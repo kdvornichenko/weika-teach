@@ -378,6 +378,22 @@ section.main-section .text-block .text {
   line-height: 36px;
 }
 
+section.main-section .text-block .subtext {
+  margin-top: 30px;
+}
+
+section.main-section .text-block .subtext ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  color: #263238;
+}
+
+section.main-section .text-block .subtext ul li:last-child {
+  white-space: nowrap;
+}
+
 section.main-section button {
   margin-top: 60px;
   width: 400px;
