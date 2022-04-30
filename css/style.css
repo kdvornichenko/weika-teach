@@ -118,7 +118,7 @@ button {
   transition: 0.5s;
 }
 
-button:hover {
+button:hover a {
   color: #fff;
 }
 
