@@ -819,11 +819,13 @@ section.skills-section .grid .speaking-more.visible .cross::after {
 }
 
 section.skills-section .grid .speaking-more.visible .cross::before {
-  transform: rotate(-45deg);
+  top: 50%;
+  transform: rotate(-45deg) translate(0px, -60%);
 }
 
 section.skills-section .grid .speaking-more.visible .cross::after {
-  transform: rotate(45deg);
+  bottom: 50%;
+  transform: rotate(45deg) translate(0px, 75%);
 }
 
 section.skills-section .grid .speaking-more.visible .column-wrap {
