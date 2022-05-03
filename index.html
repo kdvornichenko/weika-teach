@@ -946,7 +946,7 @@
             <h2 class="lng-h2-contact-2 pc-heading anim">
                 Contact Us
             </h2>
-            <div class="lng-contact-text text">
+            <div class="lng-contact-text text contact-form">
                 Discover your current English level by taking our free online English test. <br> Sign up to our newsletter for learning tips and free resources
             </div> 
             <form id="contact-form" class="contact-form" action="sendmail.php" method="post" autocomplete="on" name="sendMail">
@@ -959,8 +959,9 @@
                 <label class="" for="mail">E-mail*</label>
                 <input class="_email _req" type="email" name="email" id="mail" >
 
-                <select class="_req" name="lvl" placeholder="Your English Level" >
-                    <option class="lng-option-label" value="" selected disabled>Choose Your English Level</options>
+                <label for="lvl">Choose Your English Level</label>
+                <select class="_req" name="lvl" id="lvl" placeholder="Your English Level" >
+                    <option class="" value="" selected disabled></options>
                     <option value="A1">А1</options>
                     <option value="A2">A2</options>
                     <option value="B1">B1</options>

@@ -120,9 +120,18 @@ button {
 
 button:hover {
   color: #fff;
+  background: #263238;
 }
 
 button:hover a {
+  color: #fff;
+}
+
+button:active {
+  color: #fff;
+}
+
+button:active a {
   color: #fff;
 }
 
@@ -133,7 +142,7 @@ button a {
 button a span {
   display: block;
   width: 100%;
-  padding: 18px 0;
+  padding: 16px 0;
 }
 
 button::before {
@@ -150,8 +159,8 @@ button::before {
 }
 
 button:hover::before {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 
 button span {
@@ -1461,7 +1470,7 @@ section.contact-section .block-wrap .text-wrap form {
   flex-direction: column;
 }
 
-section.contact-section .block-wrap .text-wrap form input:not(.checkbox__input),
+section.contact-section .block-wrap .text-wrap form input,
 section.contact-section .block-wrap .text-wrap form select {
   padding-left: 33px;
   width: 100%;
@@ -1476,7 +1485,7 @@ section.contact-section .block-wrap .text-wrap form select {
   transition: 0.2s;
 }
 
-section.contact-section .block-wrap .text-wrap form input:not(.checkbox__input):focus,
+section.contact-section .block-wrap .text-wrap form input:focus,
 section.contact-section .block-wrap .text-wrap form select:focus {
   box-shadow: 0 0 15px #8F95A5;
 }
@@ -1486,8 +1495,45 @@ section.contact-section .block-wrap .text-wrap form select._error {
   box-shadow: 0 0 15px red;
 }
 
-section.contact-section .block-wrap .text-wrap form .checkbox {
-  display: flex;
+section.contact-section .block-wrap .text-wrap form .checkbox input {
+  display: none;
+}
+
+section.contact-section .block-wrap .text-wrap form .checkbox input:checked + label::after {
+  transform: scale(1);
+}
+
+section.contact-section .block-wrap .text-wrap form .checkbox label {
+  font-size: 16px;
+  line-height: 140%;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+section.contact-section .block-wrap .text-wrap form .checkbox label::before {
+  content: "";
+  align-self: flex-start;
+  flex: 0 0 24px;
+  height: 24px;
+  background-color: #fff;
+  border: 2px solid #8F95A5;
+  border-radius: 6px;
+  margin: 0 10px 0 0;
+}
+
+section.contact-section .block-wrap .text-wrap form .checkbox label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #263238;
+  border-radius: 4px;
+  transform: scale(0);
+  transition: 0.4s;
 }
 
 section.contact-section .block-wrap .text-wrap form .checkbox._error .checkbox__label::before {
@@ -1646,6 +1692,10 @@ footer ul li a {
     margin-top: 27px;
     font-size: 20px;
     line-height: 30px;
+  }
+
+  section.main-section .subtext ul li {
+    font-size: 20px;
   }
 
   section.main-section button {
@@ -1920,6 +1970,15 @@ footer ul li a {
     margin-top: 22px;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  section.main-section .subtext ul {
+    justify-content: unset;
+    gap: 6px;
+  }
+
+  section.main-section .subtext ul li {
+    font-size: 16px;
   }
 
   section.main-section button {
@@ -2248,6 +2307,32 @@ footer ul li a {
     font-size: 14px;
   }
 
+  button:hover {
+    color: #000;
+  }
+
+  button:hover a {
+    color: #000;
+  }
+
+  button:active {
+    color: #fff;
+  }
+
+  button:active a {
+    color: #fff;
+  }
+
+  button:hover::before {
+    width: 0;
+    height: 0;
+  }
+
+  button:active::before {
+    width: 800px;
+    height: 800px;
+  }
+
   section.main-section {
     flex-direction: column-reverse;
     align-items: center;
@@ -2321,7 +2406,7 @@ footer ul li a {
 
   section.skills-section .grid div.card button {
     position: absolute;
-    bottom: 0px;
+    bottom: 10px;
     width: 85%;
     left: 50%;
     transform: translateX(-50%);
@@ -2437,14 +2522,7 @@ footer ul li a {
   section.skills-section .listening-grid div.card.writing.visible,
   section.skills-section .listening-grid div.card.reading.visible,
   section.skills-section .listening-grid div.card.listening.visible {
-    padding: 30px 15px;
-  }
-
-  section.skills-section .speaking-grid div.card button,
-  section.skills-section .writing-grid div.card button,
-  section.skills-section .reading-grid div.card button,
-  section.skills-section .listening-grid div.card button {
-    position: relative;
+    padding: 30px 15px 75px 35px;
   }
 
   section.about-section {
@@ -2623,16 +2701,28 @@ footer ul li a {
 
   section.skills-section .grid div.card {
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 75px;
     text-align: center;
   }
 
-  section.skills-section .grid div.card button {
-    position: unset;
+  section.skills-section .grid div.card.hidden {
+    display: block;
+  }
+
+  section.skills-section .grid .speaking.visible {
+    animation: unset;
+  }
+
+  section.skills-section .grid .reading.visible {
+    animation: unset;
   }
 
   section.skills-section .grid .writing .card-img {
     text-align: center;
+  }
+
+  section.skills-section .grid .writing.visible {
+    animation: unset;
   }
 
   section.skills-section .grid div.listening .listening-text-wrap {
@@ -2642,6 +2732,10 @@ footer ul li a {
   section.skills-section .grid div.listening .card-img {
     margin-top: 0;
     justify-content: center;
+  }
+
+  section.skills-section .grid div.listening.visible {
+    animation: unset;
   }
 
   section.skills-section .grid h3 {
