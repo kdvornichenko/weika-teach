@@ -399,7 +399,7 @@ section.main-section .text-block .subtext ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  font-size: 24px;
+  font-size: 26px;
   color: #263238;
 }
 
@@ -1362,6 +1362,14 @@ section.pricing-section .block-wrap .block.visible:last-child {
   animation: slide-in-right 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+section.pricing-section .block-wrap .block:last-child h3 {
+  white-space: unset;
+}
+
+section.pricing-section .block-wrap .block:last-child h3 br {
+  display: block;
+}
+
 section.pricing-section .block-wrap .block {
   max-width: 29%;
   text-align: left;
@@ -1393,7 +1401,7 @@ section.pricing-section .block-wrap .block .text {
 
 section.pricing-section .block-wrap .block .price-label {
   margin-top: 30px;
-  padding: 0 25px;
+  padding: 0 20px;
   position: absolute;
   bottom: 10px;
   display: flex;
@@ -1409,6 +1417,21 @@ section.pricing-section .block-wrap .block .price-label .price {
   font-size: 30px;
   line-height: 45px;
   color: #263238;
+}
+
+section.pricing-section .block-wrap .block .price-label .price-old {
+  position: relative;
+}
+
+section.pricing-section .block-wrap .block .price-label .price-old::before {
+  content: "";
+  position: absolute;
+  width: 62px;
+  height: 2px;
+  border-radius: 50%;
+  background: #263238;
+  top: 50%;
+  transform: rotateZ(-15deg) translateY(-50%);
 }
 
 section.pricing-section .block-wrap .block .price-label .period {
@@ -1695,6 +1718,12 @@ footer ul li a {
   }
 }
 
+@media screen and (max-width: 1080px) {
+  section.pricing-section .block-wrap .block h3 br {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 993px) {
   body {
     padding: 15px 30px;
@@ -1847,7 +1876,7 @@ footer ul li a {
   }
 
   section.pricing-section .block-wrap .block {
-    padding-bottom: 90px;
+    padding-bottom: 120px;
   }
 
   section.pricing-section .block-wrap .block .pricing-img {
@@ -2011,6 +2040,10 @@ footer ul li a {
 
   button:hover {
     background: transparent;
+  }
+
+  button a span {
+    padding: 10px 0;
   }
 
   section.main-section {
