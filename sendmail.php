@@ -30,7 +30,7 @@ if(trim(!empty($_POST['email']))){
     $body.='<p><strong>Email:</strong> '.$_POST['email'].'</p>';
 }
 if(trim(!empty($_POST['plan']))){
-    $body.='<p><strong>Тариф:</strong> '.$_POST['lvl'].'</p>';
+    $body.='<p><strong>Тариф:</strong> '.$_POST['plan'].'</p>';
 }
 if(trim(!empty($_POST['lvl']))){
     $body.='<p><strong>Уровень:</strong> '.$_POST['lvl'].'</p>';
