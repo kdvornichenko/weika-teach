@@ -49,6 +49,7 @@ h2.visible {
 @-webkit-keyframes tracking-in-contract-bck {
   0% {
     letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
     transform: translateZ(400px);
     opacity: 0;
   }
@@ -58,6 +59,7 @@ h2.visible {
   }
 
   100% {
+    -webkit-transform: translateZ(0);
     transform: translateZ(0);
     opacity: 1;
   }
@@ -66,6 +68,7 @@ h2.visible {
 @keyframes tracking-in-contract-bck {
   0% {
     letter-spacing: 1em;
+    -webkit-transform: translateZ(400px);
     transform: translateZ(400px);
     opacity: 0;
   }
@@ -75,6 +78,7 @@ h2.visible {
   }
 
   100% {
+    -webkit-transform: translateZ(0);
     transform: translateZ(0);
     opacity: 1;
   }
@@ -179,7 +183,6 @@ img {
 }
 
 header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 100%;
@@ -204,8 +207,7 @@ header .header-wrap .logo {
 
 header .header-wrap .logo .typewriter {
   display: flex;
-  -webkit-animation: typewriter 3s steps(22) 0.5s 1 normal both, textCursor 1s steps(2) infinite normal;
-          animation: typewriter 3s steps(22) 0.5s 1 normal both, textCursor 1s steps(2) infinite normal;
+  animation: typewriter 3s steps(22) 0.5s 1 normal both, textCursor 1s steps(2) infinite normal;
   border-right: 2px solid #000;
   white-space: nowrap;
   overflow: hidden;
@@ -290,20 +292,6 @@ header .header-wrap .mobile_menu {
   display: none;
 }
 
-@-webkit-keyframes typewriter {
-  0% {
-    width: 0;
-  }
-
-  50%, 90% {
-    width: 245px;
-  }
-
-  100% {
-    width: 220px;
-  }
-}
-
 @keyframes typewriter {
   0% {
     width: 0;
@@ -315,16 +303,6 @@ header .header-wrap .mobile_menu {
 
   100% {
     width: 220px;
-  }
-}
-
-@-webkit-keyframes textCursor {
-  from {
-    border: none;
-  }
-
-  to {
-    border-right-color: #000;
   }
 }
 
@@ -340,11 +318,13 @@ header .header-wrap .mobile_menu {
 
 @-webkit-keyframes slide-out-bottom {
   0% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
 
   100% {
+    -webkit-transform: translateY(1000px);
     transform: translateY(1000px);
     opacity: 0;
   }
@@ -352,11 +332,13 @@ header .header-wrap .mobile_menu {
 
 @keyframes slide-out-bottom {
   0% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
 
   100% {
+    -webkit-transform: translateY(1000px);
     transform: translateY(1000px);
     opacity: 0;
   }
@@ -388,10 +370,8 @@ section.main-section .text-block .heading svg path {
 }
 
 section.main-section .text-block .heading svg path:first-child {
-  -webkit-animation: fill infinite;
-          animation: fill infinite;
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
+  animation: fill infinite;
+  animation-delay: 3.5s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   fill: #fff;
@@ -506,16 +486,6 @@ section.main-section .promo-modal .modal-cross::after {
 section.main-section .promo-modal.active {
   opacity: 1;
   visibility: visible;
-}
-
-@-webkit-keyframes fill {
-  from {
-    fill: #fff;
-  }
-
-  to {
-    fill: #fff824;
-  }
 }
 
 @keyframes fill {
@@ -850,13 +820,10 @@ section.skills-section h2 {
 
 section.skills-section .grid {
   margin-top: 40px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 32% 18px 32% 18px 32%;
   grid-template-columns: 32% 32% 32%;
-  -ms-grid-rows: auto 18px 343px;
   grid-template-rows: auto 343px;
-      grid-template-areas: "speaking writing reading" "speaking listening listening";
+  grid-template-areas: "speaking writing reading" "speaking listening listening";
   gap: 18px;
 }
 
@@ -871,9 +838,6 @@ section.skills-section .grid .card.hidden {
 }
 
 section.skills-section .grid .speaking {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
   grid-area: speaking;
 }
 
@@ -909,8 +873,7 @@ section.skills-section .grid .listening-more.visible {
   position: relative;
   flex-direction: column;
   justify-content: center;
-  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-          animation: slide-in-right 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation: slide-in-right 0.5s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
 section.skills-section .grid .speaking-more.visible .cross,
@@ -986,8 +949,7 @@ section.skills-section .grid .listening-more.visible button {
 }
 
 section.skills-section .grid .speaking.visible {
-  -webkit-animation: slide-in-left 1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-          animation: slide-in-left 1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation: slide-in-left 1s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
 section.skills-section .grid .speaking.visible .card-img {
@@ -999,8 +961,6 @@ section.skills-section .grid .speaking.visible h3 {
 }
 
 section.skills-section .grid .writing {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: writing;
 }
 
@@ -1013,13 +973,11 @@ section.skills-section .grid .writing-more {
 }
 
 section.skills-section .grid .writing.visible {
-  -webkit-animation: slide-in-right 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-          animation: slide-in-right 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation: slide-in-right 0.6s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
 section.skills-section .grid .reading.visible {
-  -webkit-animation: slide-in-right 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-          animation: slide-in-right 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation: slide-in-right 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
 section.skills-section .grid .reading-more {
@@ -1027,9 +985,6 @@ section.skills-section .grid .reading-more {
 }
 
 section.skills-section .grid .listening {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 3;
   grid-area: listening;
   display: flex;
   flex-direction: row;
@@ -1045,8 +1000,7 @@ section.skills-section .grid .listening-more {
 }
 
 section.skills-section .grid .listening.visible {
-  -webkit-animation: slide-in-right 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) both;
-          animation: slide-in-right 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+  animation: slide-in-right 0.4s cubic-bezier(0.47, 0, 0.745, 0.715) both;
 }
 
 section.skills-section .grid .writing.clicked,
@@ -1084,11 +1038,13 @@ section.skills-section .grid.listening-grid {
 
 @-webkit-keyframes slide-in-left {
   0% {
+    -webkit-transform: translateX(-1000px);
     transform: translateX(-1000px);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -1096,11 +1052,13 @@ section.skills-section .grid.listening-grid {
 
 @keyframes slide-in-left {
   0% {
+    -webkit-transform: translateX(-1000px);
     transform: translateX(-1000px);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -1324,11 +1282,13 @@ section.about-section .about-img.visible {
 
 @-webkit-keyframes slide-in-left {
   0% {
+    -webkit-transform: translateX(-1000px);
     transform: translateX(-1000px);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -1336,11 +1296,13 @@ section.about-section .about-img.visible {
 
 @keyframes slide-in-left {
   0% {
+    -webkit-transform: translateX(-1000px);
     transform: translateX(-1000px);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -1348,11 +1310,13 @@ section.about-section .about-img.visible {
 
 @-webkit-keyframes slide-in-right {
   0% {
+    -webkit-transform: translateX(1000px);
     transform: translateX(1000px);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -1360,11 +1324,13 @@ section.about-section .about-img.visible {
 
 @keyframes slide-in-right {
   0% {
+    -webkit-transform: translateX(1000px);
     transform: translateX(1000px);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -1476,11 +1442,13 @@ section.pricing-section .block-wrap .block .price-label .period {
 
 @-webkit-keyframes slide-in-left {
   0% {
+    -webkit-transform: translateX(-1000px);
     transform: translateX(-1000px);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -1488,11 +1456,13 @@ section.pricing-section .block-wrap .block .price-label .period {
 
 @keyframes slide-in-left {
   0% {
+    -webkit-transform: translateX(-1000px);
     transform: translateX(-1000px);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -1500,11 +1470,13 @@ section.pricing-section .block-wrap .block .price-label .period {
 
 @-webkit-keyframes slide-in-right {
   0% {
+    -webkit-transform: translateX(1000px);
     transform: translateX(1000px);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -1512,11 +1484,13 @@ section.pricing-section .block-wrap .block .price-label .period {
 
 @keyframes slide-in-right {
   0% {
+    -webkit-transform: translateX(1000px);
     transform: translateX(1000px);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
   }
@@ -1524,11 +1498,13 @@ section.pricing-section .block-wrap .block .price-label .period {
 
 @-webkit-keyframes slide-in-top {
   0% {
+    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -1536,11 +1512,13 @@ section.pricing-section .block-wrap .block .price-label .period {
 
 @keyframes slide-in-top {
   0% {
+    -webkit-transform: translateY(-1000px);
     transform: translateY(-1000px);
     opacity: 0;
   }
 
   100% {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
   }
@@ -1835,7 +1813,6 @@ footer ul li a {
 
   section.skills-section .grid {
     margin-top: 50px;
-    -ms-grid-rows: auto;
     grid-template-rows: auto;
     gap: 10px;
   }
@@ -2018,20 +1995,6 @@ footer ul li a {
     font-size: 18px;
     margin-left: 35px;
   }
-
-@-webkit-keyframes typewriter {
-    0% {
-      width: 0;
-    }
-
-    50%, 90% {
-      width: 190px;
-    }
-
-    100% {
-      width: 168px;
-    }
-}
 
 @keyframes typewriter {
     0% {
@@ -2284,8 +2247,6 @@ footer ul li a {
   }
 
   footer ul li:first-child {
-    width: -webkit-min-content;
-    width: -moz-min-content;
     width: min-content;
   }
 
@@ -2528,13 +2489,9 @@ footer ul li a {
 
   section.skills-section .grid {
     margin-top: 30px;
-    -ms-grid-columns: auto;
     grid-template-columns: auto;
-    -ms-grid-rows: -webkit-max-content;
-    -ms-grid-rows: max-content;
-    grid-template-rows: -webkit-max-content;
     grid-template-rows: max-content;
-        grid-template-areas: "speaking writing" "reading listening";
+    grid-template-areas: "speaking writing" "reading listening";
     gap: 30px;
   }
 
@@ -2825,31 +2782,12 @@ footer ul li a {
   }
 
   footer ul li {
-    width: -webkit-min-content;
-    width: -moz-min-content;
     width: min-content;
     list-style: none;
   }
 
   footer ul li a {
     font-size: 12px;
-  }
-
-  section.skills-section .grid .speaking {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-  }
-
-  section.skills-section .grid .writing {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-  }
-
-  section.skills-section .grid .listening {
-    -ms-grid-row: 3;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
   }
 }
 
@@ -2876,13 +2814,11 @@ footer ul li a {
   }
 
   section.skills-section .grid .speaking.visible {
-    -webkit-animation: unset;
-            animation: unset;
+    animation: unset;
   }
 
   section.skills-section .grid .reading.visible {
-    -webkit-animation: unset;
-            animation: unset;
+    animation: unset;
   }
 
   section.skills-section .grid .writing .card-img {
@@ -2890,8 +2826,7 @@ footer ul li a {
   }
 
   section.skills-section .grid .writing.visible {
-    -webkit-animation: unset;
-            animation: unset;
+    animation: unset;
   }
 
   section.skills-section .grid div.listening .listening-text-wrap {
@@ -2904,8 +2839,7 @@ footer ul li a {
   }
 
   section.skills-section .grid div.listening.visible {
-    -webkit-animation: unset;
-            animation: unset;
+    animation: unset;
   }
 
   section.skills-section .grid h3 {
@@ -2939,20 +2873,6 @@ footer ul li a {
   header .header-wrap .logo .typewriter .ch.margin {
     margin-left: -16px;
   }
-
-@-webkit-keyframes typewriter {
-    0% {
-      width: 0;
-    }
-
-    50%, 90% {
-      width: 165px;
-    }
-
-    100% {
-      width: 145px;
-    }
-}
 
 @keyframes typewriter {
     0% {
