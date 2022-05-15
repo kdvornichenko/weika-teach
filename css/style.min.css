@@ -1539,6 +1539,7 @@ section.contact-section .block-wrap {
 }
 
 section.contact-section .block-wrap .text-wrap {
+  width: 100%;
   max-width: 660px;
 }
 
